@@ -104,7 +104,8 @@ public class dataSorter {
 		
 		System.out.println("\n" + mythread.getMemoryAccesses());*/
 		
-		if ((data = primary.getSorted()) != null && acceptanceTest(data) && simulateMemFail(primary.getMemoryAccesses(), probPrimary)) {
+		if (primary.getSorted() != null && acceptanceTest(data) && simulateMemFail(primary.getMemoryAccesses(), probPrimary)) {
+			data = primary.getSorted();
 			writeArrayToFile(outFile, data);
 			return;
 		}
