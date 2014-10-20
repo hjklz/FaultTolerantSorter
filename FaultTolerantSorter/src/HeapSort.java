@@ -74,6 +74,7 @@ public class HeapSort extends Thread {
 		try {
 			sort(arr);
 		} catch (ThreadDeath td) {
+			arr = null;
 			throw new ThreadDeath();
 		}
 	}

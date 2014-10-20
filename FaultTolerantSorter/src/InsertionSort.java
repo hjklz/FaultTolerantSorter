@@ -27,6 +27,7 @@ public class InsertionSort extends Thread{
         try {
         	result = memoryAccessesAndSortedArray(arr);
         } catch (ThreadDeath td) {
+        	result = null;
 			throw new ThreadDeath();
 		}
     }
